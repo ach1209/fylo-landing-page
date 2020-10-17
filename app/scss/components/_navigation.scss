@@ -1,0 +1,40 @@
+#navigation {
+  padding: 3rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    width: 25%;
+
+    @include device-medium {
+      width: 20%;
+    }
+
+    @include device-large {
+      width: auto;
+    }
+  }
+
+  &__items {
+
+    a {
+      padding: 0 1rem;
+      font-family: $headingFont;
+      color: $darkBlue;
+      text-decoration: none;
+
+      @include device-large {
+        padding: 0 2rem;
+      }
+
+      &:hover,
+      &:focus {
+        color: $desaturatedBlue;
+      }
+    }
+  }
+}

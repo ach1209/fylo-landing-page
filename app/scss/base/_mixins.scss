@@ -1,0 +1,19 @@
+@mixin device-medium {
+  @media screen and (min-width: #{$device-medium}) {
+    @content;
+  }
+}
+
+@mixin device-large {
+  @media screen and (min-width: #{$device-large}) {
+    @content;
+  }
+}
+
+@mixin container {
+  margin: 0 auto;
+
+  @include device-large {
+    max-width: 1200px;
+  }
+}
