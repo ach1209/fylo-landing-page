@@ -1,5 +1,9 @@
 #navigation {
   padding: 3rem;
+
+  @include device-large {
+    padding: 3rem 0;
+  }
 }
 
 .navbar {
