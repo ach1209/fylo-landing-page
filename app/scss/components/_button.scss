@@ -1,0 +1,20 @@
+.btn {
+  flex: 1;
+  height: 4rem;
+  color: #fff;
+  background-color: $accentBlue;
+  font-family: $headingFont;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 2px rgba(0,0,0, 0.25), 
+              0 1px 4px rgba(0,0,0, 0.35);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($darkBlue, 0.9);
+  }
+}
