@@ -1,19 +1,23 @@
 .cta {
   padding-top: 8rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  color: $darkBlue;
 
-  @include device-medium {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-  }
+  &__container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: $darkBlue;
+    @include container;
 
-  @include device-large {
-    flex-direction: row;
-    padding-left: 0;
-    padding-right: 0;
+    @include device-medium {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+
+    @include device-large {
+      flex-direction: row;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__image {
@@ -96,5 +100,9 @@
         }
       }
     }
+  }
+
+  &--dark-bg {
+    background-color: $desaturatedBlue;
   }
 }

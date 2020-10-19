@@ -21,7 +21,3 @@ body {
   font-family: $mainFont;
   font-size: 1.6rem;
 }
-
-#app {
-  @include container;
-}
