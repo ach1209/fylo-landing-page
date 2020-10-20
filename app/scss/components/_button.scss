@@ -25,4 +25,11 @@
   &:focus {
     background-color: rgba($darkBlue, 0.9);
   }
+
+  &--half-full {
+
+    @include device-large {
+      flex-basis: 50%;
+    }
+  }
 }

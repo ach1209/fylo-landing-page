@@ -52,6 +52,10 @@
       font-size: 4rem;
       line-height: 5rem;
     }
+
+    &--invert {
+      color: #fff;
+    }
   }
 
   &__text {
@@ -60,6 +64,25 @@
     @include device-large {
       text-align: left;
       font-size: 1.8rem;
+    }
+
+    &--invert {
+      color: #fff;
+    }
+
+    &--limited {
+
+      @include device-large {
+        max-width: 74%;
+        line-height: 3rem;
+      }
+    }
+
+    &-container {
+      
+      &--flex {
+        flex: 1;
+      }
     }
   }
 
@@ -105,5 +128,7 @@
 
   &--dark-bg {
     background-color: $desaturatedBlue;
+    padding-bottom: 8rem;
+    margin-bottom: 0;
   }
 }
