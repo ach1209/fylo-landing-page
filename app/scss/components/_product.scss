@@ -69,37 +69,28 @@
   }
 
   &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: $accentCyan;
     text-decoration: none;
     padding-bottom: 0.5rem;
     position: relative;
+    display: table;
+    margin: 0 auto;
 
     @include device-large {
-      justify-content: flex-start;
+      margin: 0;
     }
 
     &:after {
       content: '';
-      display: block;
-      width: 47%;
+      width: 100%;
       position: absolute;
       bottom: 0;
+      left: 0;
       border: 1px solid $accentCyan;
-
-      @include device-medium {
-        width: 29%;
-      }
-
-      @include device-large {
-        width: 31%;
-      }
     }
 
     img {
-      flex-basis: 6%;
+      vertical-align: middle;
       margin-left: 1rem;
     }
   }
