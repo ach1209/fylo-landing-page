@@ -98,7 +98,7 @@
         position: absolute;
         top: 1rem;
         left: 2rem;
-        color: $neutralGray;
+        color: darken($neutralGray, 30%);
         font-family: 'Open Sans', sans-serif;
         transition: opacity 0.2s ease-out,
                     visibility 0.2s ease-out;
