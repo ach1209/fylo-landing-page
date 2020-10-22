@@ -6,8 +6,7 @@
     @include container;
 
     @include device-large {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
     }
   }
 
@@ -50,15 +49,14 @@
     }
 
     &-text {
-      color: #fff;
+      color: $white;
       letter-spacing: 0.5px;
     }
   }
 
   &__items {
     margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 
     @include device-large {
       flex: 1;
@@ -66,7 +64,7 @@
     }
 
     a {
-      color: #fff;
+      color: $white;
       text-decoration: none;
       line-height: 3rem;
     }

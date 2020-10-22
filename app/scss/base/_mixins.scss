@@ -17,3 +17,8 @@
     max-width: 1200px;
   }
 }
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
