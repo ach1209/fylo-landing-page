@@ -1,0 +1,38 @@
+@use '../../base/mixins/' as mix;
+@use '../../base/colors/' as color;
+@use '../../base/typography/' as font;
+
+button {
+  color: color.$white;
+  font-family: font.$heading;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 2px rgba(0,0,0, 0.25), 
+              0 1px 4px rgba(0,0,0, 0.35);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(color.$darkBlue, 0.9);
+  }
+}
+
+.btn-primary {
+  height: 4rem;
+  background-color: color.$accentBlue;
+
+  @include mix.min-width(1000px) {
+    margin-right: 6rem;
+  }
+}
+
+.btn-primary--flex-size {
+  flex-basis: 100%;
+
+  @include mix.min-width(600px) {
+    flex-basis: 30%;
+  }
+}

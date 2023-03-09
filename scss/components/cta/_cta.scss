@@ -1,0 +1,67 @@
+@use '../../base/mixins/' as mix;
+@use '../../base/colors/' as color;
+@use '../../base/typography/' as font;
+
+.cta {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;  
+  padding-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.cta-image {
+  grid-column: 1 / -1;
+  text-align: center;
+
+  @include mix.min-width(1000px) {
+    grid-column: 4 / span 4;
+    text-align: initial;
+  }
+  @include mix.min-width(1270px) {
+    grid-column: 5 / span 4;
+  }
+
+  & > img {
+    width: 50%;
+
+    @include mix.min-width(1000px) {
+      width: 100%;
+    }
+  }
+}
+
+.cta-content {
+  grid-column: 1 / -1;
+  padding: 0 2rem;
+
+  @include mix.min-width(1000px) {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+  }
+  @include mix.min-width(1270px) {
+    grid-column: 2 / span 3;
+    padding: 0;    
+  }
+}
+
+.cta-heading {
+  color: color.$darkBlue;
+  font-family: font.$heading;
+  font-size: clamp(2.5rem, 3.35rem, 3.45rem);
+  text-align: center;
+
+  @include mix.min-width(1000px) {
+    text-align: left;
+  }
+}
+
+.cta-text {
+  color: color.$darkBlue;
+  font-size: 1.8rem;
+  text-align: center;
+
+  @include mix.min-width(1000px) {
+    text-align: left;
+  }
+}

@@ -1,0 +1,39 @@
+@use '../../base/mixins' as mix;
+@use '../../base/colors/' as color;
+@use '../../base/typography/' as font;
+
+form {
+  position: relative;
+  @include mix.flex;
+  flex-wrap: wrap;
+}
+
+label {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  color: darken(color.$neutralGray, 30%);
+  font-family: font.$primary;
+  transition: opacity 0.2s ease-out,
+              visibility 0.2s ease-out;
+  pointer-events: none;
+}
+
+input {
+  width: 100%;
+  height: 4rem;
+  padding: 0 2rem;
+  border: 1px solid color.$desaturatedBlue;
+  border-radius: 5px;
+  outline: none;
+
+  @include mix.min-width(600px) {
+    flex: 1;
+    margin-right: 2rem;
+  }
+
+  &:focus ~ label {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
