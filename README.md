@@ -6,6 +6,6 @@ Mobile first landing page built with HTML, SCSS and bundled with Webpack
 
 <code>npm install</code>
 
-<code>npm run serve</code>
+<code>npm run dev</code>
 
-Open <code>localhost:3000</code> in browser
+Open <code>http://127.0.0.1:5173/</code> in browser

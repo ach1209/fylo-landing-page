@@ -4,22 +4,15 @@
   "description": "Frontend Mentor Challenge",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "serve": "npm run dev && webpack-dev-server"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "Anthony Chen",
   "license": "ISC",
   "devDependencies": {
-    "copy-webpack-plugin": "^6.1.1",
-    "css-loader": "^4.3.0",
-    "html-webpack-plugin": "^4.5.0",
-    "mini-css-extract-plugin": "^0.11.2",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.2",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "sass": "^1.58.3",
+    "vite": "^4.1.3"
   }
 }
