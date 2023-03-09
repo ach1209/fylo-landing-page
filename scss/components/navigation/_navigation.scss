@@ -1,0 +1,36 @@
+@use '../../base/mixins/' as mix;
+@use '../../base/colors/' as color;
+@use '../../base/typography/' as font;
+
+.navbar {
+  @include mix.flex(center, space-between);
+  width: 100%;
+}
+
+.site-logo {
+  width: clamp(10rem, 15%, 16rem);
+}
+
+.menu {
+  list-style-type: none;
+}
+
+.menu-item {
+  display: inline-block;
+}
+
+.menu-link {
+  padding: 0 1rem;
+  color: color.$darkBlue;
+  font-family: font.$heading;
+  text-decoration: none;
+
+  @include mix.min-width(1000px) {
+    padding: 0 2rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: color.$desaturatedBlue;
+  }
+}
