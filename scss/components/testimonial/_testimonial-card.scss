@@ -1,0 +1,63 @@
+@use '../../base/mixins/' as mix;
+@use '../../base/colors/' as color;
+@use '../../base/typography/' as font;
+
+.testimonial-card {
+  margin: 3rem;
+  padding: 3rem;
+  background-color: color.$white;
+  border-radius: 5px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 
+              0 1px 10px rgba(0, 0, 0, 0.15);
+  
+  @include mix.min-width(1000px) {
+    width: 68%;
+    margin: 3rem 0;
+  }
+
+  & > p {
+    color: color.$darkBlue;
+    letter-spacing: 1px;
+    line-height: 2.5rem;
+  }
+}
+
+.card-icon {
+  display: block;
+  width: 5%;
+}
+
+.card-footer {
+  margin-top: 2rem;
+  @include mix.flex;
+}
+
+.avatar-container {
+  width: 7rem;
+  height: 7rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card-avatar {
+  width: 8rem;
+  height: 8rem;
+  margin-left: -5px;
+}
+
+.card-footer-details {
+  & > * {
+    display: block;
+    color: color.$darkBlue;
+  }
+
+  & > .name {
+    font-family: font.$heading;
+    font-weight: 700;
+  }
+
+  & > .job-title {
+    font-size: 1.4rem;
+  }
+}
