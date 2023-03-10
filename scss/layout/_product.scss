@@ -1,0 +1,91 @@
+@use '../base/mixins/' as mix;
+@use '../base/colors/' as color;
+@use '../base/typography/' as font;
+
+.product-block-outer-container {
+  background-color: color.$neutralBlue;
+}
+
+.product-block {
+  padding: 4rem 0 10rem;
+  @include mix.container;
+
+  @include mix.min-width(1000px) {
+    @include mix.flex(center);
+    gap: 1rem;    
+  }
+}
+
+.product-image-container {
+  @include mix.min-width(1000px) {
+    order: 2;
+  }
+}
+
+.product-image-container > img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+
+  @include mix.min-width(1000px) {
+    width: 100%;
+  }
+}
+
+.product-block-content {
+  margin-top: 10rem;
+  padding: 0 2rem;
+
+  @include mix.min-width(1000px) {
+    padding: 0;
+  }
+}
+
+.product-block-content > h2 {
+  color: color.$darkBlue;
+  font-family: font.$heading;
+  font-size: clamp(2rem, 7vw, 3rem);
+  text-align: center;
+  margin-bottom: 3rem;
+
+  @include mix.min-width(1000px) {
+    text-align: left;
+  }
+}
+
+.product-block-content > p {
+  color: color.$desaturatedBlue;
+  margin-bottom: 2rem;
+
+  @include mix.min-width(1000px) {
+    max-width: 75%;
+    font-size: 1.5rem;
+  }
+}
+
+.product-link {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+  color: darken(color.$accentCyan, 10%);
+  text-decoration: none;
+
+  @include mix.min-width(1000px) {
+    margin: 0;
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid color.$accentCyan;
+  }
+
+  & > img {
+    vertical-align: middle;
+    margin-left: 1rem;
+  }
+}

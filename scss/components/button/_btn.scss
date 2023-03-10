@@ -36,3 +36,14 @@ button {
     flex-basis: 30%;
   }
 }
+
+.btn-secondary {
+  @extend .btn-primary;
+  flex-basis: 100%;
+}
+
+.btn-secondary--flex-size {
+  @include mix.min-width(1000px) {
+    flex-basis: 50%;
+  }
+}

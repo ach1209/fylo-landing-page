@@ -65,3 +65,36 @@
     text-align: left;
   }
 }
+
+.cta-content-flex {
+  padding: 0 2rem;
+  @include mix.container;
+  @include mix.flex(null, space-between);
+  flex-direction: column;
+
+  @include mix.min-width(1000px) {
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  & > form > input {
+    flex: initial;
+  }
+}
+
+.cta-text-wrapper {
+  max-width: 47%;
+  line-height: 3rem;
+}
+
+.cta--alternate {
+  background-color: color.$desaturatedBlue;
+  padding-bottom: 8rem;
+  margin-bottom: 0;
+  @include mix.flex;
+}
+
+.cta--text-white {
+  color: color.$white;
+}

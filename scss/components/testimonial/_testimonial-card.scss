@@ -3,7 +3,7 @@
 @use '../../base/typography/' as font;
 
 .testimonial-card {
-  margin: 3rem;
+  margin: 3rem 0;
   padding: 3rem;
   background-color: color.$white;
   border-radius: 5px;
@@ -12,7 +12,6 @@
   
   @include mix.min-width(1000px) {
     width: 68%;
-    margin: 3rem 0;
   }
 
   & > p {
