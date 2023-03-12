@@ -84,8 +84,11 @@
 }
 
 .cta-text-wrapper {
-  max-width: 47%;
   line-height: 3rem;
+
+  @include mix.min-width(1000px) {
+    max-width: 47%;
+  }
 }
 
 .cta--alternate {
