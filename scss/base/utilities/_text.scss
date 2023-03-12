@@ -1,3 +1,9 @@
+@use '../colors/' as color;
+
 .text-center {
   text-align: center;
+}
+
+.text-white {
+  color: color.$white;
 }

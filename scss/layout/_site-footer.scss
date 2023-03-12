@@ -1,0 +1,38 @@
+@use '../base/mixins/' as mix;
+@use '../base/colors/' as color;
+
+.site-footer {
+  background-color: color.$darkBlue;
+  padding: 8rem 0;
+}
+
+.site-footer-content {
+  @include mix.container;
+
+  @include mix.min-width(1000px) {
+    @include mix.flex;
+    flex-direction: column;
+  }
+}
+
+.site-footer-block {
+  margin: 0 3rem;
+
+  @include mix.min-width(1000px) {
+    margin: 0;
+    @include mix.flex(null, space-between);
+
+    & > div {
+      flex: 1;
+    }
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 3rem;
+  }
+}
+
+.footer-icon {
+  filter: brightness(0) invert(100%);
+  display: block;
+}

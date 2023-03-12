@@ -3,6 +3,7 @@
 
 @use './scss/layout/site-header';
 @use './scss/layout/product';
+@use './scss/layout/site-footer';
 
 @use './scss/components/navigation/navigation';
 @use './scss/components/cta/cta';
@@ -10,6 +11,7 @@
 @use './scss/components/button/btn';
 @use './scss/components/background-curve/bg-curve';
 @use './scss/components/testimonial/testimonial-card';
+@use './scss/components/contact/contact';
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
