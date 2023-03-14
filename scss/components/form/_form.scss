@@ -32,6 +32,10 @@ input {
     margin-right: 2rem;
   }
 
+  &:focus-visible {
+    outline: 1px solid color.$desaturatedBlue;
+  }
+
   &:focus ~ label {
     opacity: 0;
     visibility: hidden;
